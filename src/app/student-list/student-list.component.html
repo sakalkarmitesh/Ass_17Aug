@@ -1,0 +1,49 @@
+<!-- <p>student-list works!</p>
+ -->
+
+ <div class="bg-success p-2 text-dark bg-opacity-10">
+    <h1 style="font-size: 40px; font-weight: bold;" class="m-3 d-flex justify-content-center text-primary ">Student Details
+    </h1>
+  <table class="table table-bordered table-striped" border="2">
+    <thead class="example-full-width">
+      <tr>
+        <th>Student ID</th>
+        <th>Full Name</th>
+        
+        <th>Class</th>
+        <th>Roll No</th>
+        <th>Math</th>
+        <th>English</th>
+        <th>Hindi</th>
+        <th>Science</th>
+        <th>Drawing</th>
+        <th>Total Marks</th>
+  
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let s of Student'>
+        <td>{{s.StudentId}}</td>
+        <td>{{s.firstName+" "+s.middleName+" "+s.middleName}}</td>
+        <td>{{s.Department}}</td>
+        <td>{{s.rollNo}}</td> 
+        <td *ngIf='s.math<33; else multi'>{{s.Math}}</td>
+            <!-- <td #multi>
+                {{ s.Math}}
+            </td> -->
+            <ng-template #multi>
+                {{ s.Math}}
+              </ng-template>
+        <td>{{s.English}}</td> 
+        <td>{{s.Hindi}}</td>
+        <td>{{s.Science}}</td> 
+        <td>{{s.Drawing}}</td>
+        <td >{{s.Math+s.English+s.Hindi+s.Science+s.Drawing}}</td> 
+  
+  
+      </tr>
+    </tbody>
+  
+  
+  </table>
+  </div>

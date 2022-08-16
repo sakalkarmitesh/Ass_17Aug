@@ -1,0 +1,9 @@
+.field-box{
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+.example-full-width{
+    padding: 10px;
+}

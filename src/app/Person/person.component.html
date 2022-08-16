@@ -1,0 +1,87 @@
+<!-- <p>person works!</p>
+ -->
+ <div class="bg-success p-2 text-dark bg-opacity-10">
+    <h1 style="font-size: 40px; font-weight: bold;" class="m-3 d-flex justify-content-center text-primary ">Person Page
+    </h1>
+    <form class="example-form m-5" (ngSubmit)="onSubmit(myForm)" #myForm="ngForm">
+        <div class=" row m-4">
+            <div class="col-md-4 field-box">
+
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>FirstName</mat-label>
+                    <!-- <input type="text" matInput placeholder="Ex. Tom" name="fname" ngModel> -->
+                    <input id="firstName" type="text" name="firstName" matInput required>
+
+                </mat-form-field>
+                
+
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>MiddleName</mat-label>
+                    <!-- <input type="text" matInput placeholder="Ex. Tom" name="fname" ngModel> -->
+                    <input id="middleName" type="text" name="middlename" matInput>
+
+                </mat-form-field> 
+
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>LastName</mat-label>
+                    <!-- <input type="text" matInput placeholder="Ex. Tom" name="fname" ngModel> -->
+                    <input id="lastName" type="text" name="lastname" matInput required>
+
+                </mat-form-field>
+                
+                <mat-form-field class="example-full-width"  appearance="fill">
+                    <mat-label>Department</mat-label>
+                    <select matNativeControl required>
+                        <option value="IT">IT</option>
+                        <option value="female">HR</option>
+                        <option value="female">Payroll</option>
+                        <option value="female">Networking</option>
+                        <option value="female">Admin</option>
+
+                    </select>
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width"  appearance="fill">
+                    <mat-label>Gender</mat-label>
+                    <select matNativeControl required>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+
+                    </select>
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>DOB</mat-label>
+                    <!-- <input type="text" matInput placeholder="Ex. Tom" name="fname" ngModel> -->
+                    <input required id="age" type="number" name="age"  matInput>
+
+                </mat-form-field> 
+                <!-- <p EDirective [textcolor] = "'red'" *ngIf = "age >100 || age<0">Age should be between 1 to 100</p><br> -->
+
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Address 1</mat-label>
+                    <!-- <input type="text" matInput placeholder="Ex. Tom" name="fname" ngModel> -->
+                    <input required id="address1" type="string" name="address1" matInput>
+
+                </mat-form-field> 
+
+                
+
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Pin Code</mat-label>
+                    <!-- <input type="text" matInput placeholder="Ex. Tom" name="fname" ngModel> -->
+                    <input required id="pin" type="number" name="pin" matInput>
+
+                </mat-form-field> 
+
+                
+                
+            </div>
+            <div class="example-button-row" style="margin: auto;">
+                    
+                <button mat-button color="primary" (click)="onClick()" style="background-color: green; margin: auto;">Primary</button>
+                
+              </div>
+        </div>
+    </form>
+</div>
